@@ -8,13 +8,13 @@ class Module4Screen extends StatefulWidget {
 class _Module4ScreenState extends State<Module4Screen> {
   int _selectedIndex = 0;
 
-  final List<Widget> _pages = [
+  final List<Widget> _bottomPages = [
     HomeScreen(),
-    ProductlistScreen(),
-    DetailsScreen(),
+    ProfileScreen(),
+    SettingsScreen(),
   ];
 
-  void _onItemTapped(int index) {
+  void _onBottomNavTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
@@ -25,7 +25,7 @@ class _Module4ScreenState extends State<Module4Screen> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Module-4"),
-        backgroundColor: Colors.yellowAccent,
+        backgroundColor: Colors.yellow,
         foregroundColor: Colors.black,
       ),
       drawer: Drawer(
@@ -39,34 +39,25 @@ class _Module4ScreenState extends State<Module4Screen> {
             ListTile(
               title: Text("Home"),
               onTap: () {
-                setState(() {
-                  _selectedIndex = 0;
-                });
-                Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
               },
             ),
             ListTile(
               title: Text("Product List"),
               onTap: () {
-                setState(() {
-                  _selectedIndex = 1;
-                });
-                Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (context) => ProductlistScreen()));
               },
             ),
             ListTile(
               title: Text("Details"),
               onTap: () {
-                setState(() {
-                  _selectedIndex = 2;
-                });
-                Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (context) => DetailsScreen()));
               },
             ),
           ],
         ),
       ),
-      body: _pages[_selectedIndex],
+      body: _bottomPages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
@@ -74,9 +65,7 @@ class _Module4ScreenState extends State<Module4Screen> {
           BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'Settings'),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.black,
-        backgroundColor: Colors.yellowAccent,
-        onTap: _onItemTapped,
+        onTap: _onBottomNavTapped,
       ),
     );
   }
@@ -86,7 +75,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Home Screen"), backgroundColor: Colors.yellowAccent, foregroundColor: Colors.black),
+      appBar: AppBar(title: Text("Home Screen"), backgroundColor: Colors.yellow, foregroundColor: Colors.black),
       body: Center(child: Text("Welcome to Home Screen")),
     );
   }
@@ -96,7 +85,7 @@ class ProductlistScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Product List Screen"), backgroundColor: Colors.yellowAccent, foregroundColor: Colors.black),
+      appBar: AppBar(title: Text("Product List Screen"), backgroundColor: Colors.yellow, foregroundColor: Colors.black),
       body: Center(child: Text("Welcome to Product List Screen")),
     );
   }
@@ -106,8 +95,28 @@ class DetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Details Screen"), backgroundColor: Colors.yellowAccent, foregroundColor: Colors.black),
+      appBar: AppBar(title: Text("Details Screen"), backgroundColor: Colors.yellow, foregroundColor: Colors.black),
       body: Center(child: Text("Welcome to Details Screen")),
+    );
+  }
+}
+
+class ProfileScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("Profile Screen"), backgroundColor: Colors.yellow, foregroundColor: Colors.black),
+      body: Center(child: Text("Welcome to Profile Screen")),
+    );
+  }
+}
+
+class SettingsScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("Settings Screen"), backgroundColor: Colors.yellow, foregroundColor: Colors.black),
+      body: Center(child: Text("Welcome to Settings Screen")),
     );
   }
 }

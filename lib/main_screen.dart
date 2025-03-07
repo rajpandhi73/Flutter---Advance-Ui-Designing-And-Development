@@ -26,7 +26,7 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Main Screen"),
-        backgroundColor: Colors.yellowAccent,
+        backgroundColor: Colors.yellow,
         foregroundColor: Colors.black,
       ),
       body: Center(
@@ -40,7 +40,7 @@ class _MainScreenState extends State<MainScreen> {
                 child: ElevatedButton(
                   onPressed: () => navigateToScreen(name),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.yellow,
+                    backgroundColor: Colors.amberAccent,
                     foregroundColor: Colors.black,
                   ),
                   child: Text(name),

@@ -24,10 +24,10 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors. yellowAccent,
+      backgroundColor: Colors. yellow,
       body: Center(
         child: Text(
-          "Module-4: Navigation & Routing",
+          "Flutter - Advance Ui Designing And Development",
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 24,

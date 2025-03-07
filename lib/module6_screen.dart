@@ -17,7 +17,7 @@ class _Module6ScreenState extends State<Module6Screen> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Module-6"),
-        backgroundColor: Colors.yellowAccent,
+        backgroundColor: Colors.yellow,
         foregroundColor: Colors.black,
       ),
       body: Padding(
@@ -76,7 +76,7 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Login"), backgroundColor: Colors.yellowAccent, foregroundColor: Colors.black),
+      appBar: AppBar(title: Text("Login"), backgroundColor: Colors.yellow, foregroundColor: Colors.black),
       body: Padding(
         padding: EdgeInsets.all(16.0),
         child: Column(
@@ -96,7 +96,7 @@ class RegisterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Register"), backgroundColor: Colors.yellowAccent, foregroundColor: Colors.black),
+      appBar: AppBar(title: Text("Register"), backgroundColor: Colors.yellow, foregroundColor: Colors.black),
       body: Padding(
         padding: EdgeInsets.all(16.0),
         child: Column(
@@ -118,7 +118,7 @@ class FeedbackScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Feedback"), backgroundColor: Colors.yellowAccent, foregroundColor: Colors.black),
+      appBar: AppBar(title: Text("Feedback"), backgroundColor: Colors.yellow, foregroundColor: Colors.black),
       body: Padding(
         padding: EdgeInsets.all(16.0),
         child: Column(
